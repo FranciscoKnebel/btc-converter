@@ -1,5 +1,8 @@
 # Project Title
 
+[![Build Status](https://travis-ci.org/FranciscoKnebel/btc-converter.svg?branch=master)](https://travis-ci.org/FranciscoKnebel/btc-converter) [![Coverage Status](https://coveralls.io/repos/github/FranciscoKnebel/btc-converter/badge.svg?branch=master)](https://coveralls.io/github/FranciscoKnebel/btc-converter?branch=master)
+[![Issues](https://img.shields.io/github/issues-raw/FranciscoKnebel/btc-converter.svg?style=flat-square)](https://github.com/FranciscoKnebel/btc-converter/issues)
+
 One Paragraph of project description goes here
 
 ## Getting Started
@@ -68,7 +71,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
