@@ -4,13 +4,13 @@
   "description": "A CLI to convert Bitcoin to any currency.",
   "main": "index.js",
   "scripts": {
-    "clear": "rimraf bin",
-    "build": "npm run clear && ./node_modules/.bin/babel --out-dir bin src",
+    "clean": "./node_modules/.bin/rimraf bin",
+    "build": "./node_modules/.bin/babel --out-dir bin src",
     "build:watch": "npm run build -- --watch",
-    "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
+    "lint": "./node_modules/.bin/eslint src/*.js tests/*.spec.js",
+    "prepush": "npm run lint && npm run test:coverage",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "npm run test -- --reporter min --watch",
+    "test:tdd": "npm run test -- --watch",
     "test:coverage": "nyc npm test"
   },
   "preferGlobal": true,
@@ -57,5 +57,8 @@
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
     "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "commander": "^2.11.0"
   }
 }
