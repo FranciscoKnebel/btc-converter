@@ -17,41 +17,37 @@ function execute(command, callback) {
 	}
 }
 
-describe('Main CLI', () => {
-	it('should return the current version with argument --version', (done) => {
+describe('Main CLI', function () {
+	it('should return the current version with argument --version', async () => {
 		execute(`${btcConverter} --version`,
 			(err, stdout /* , stderr */) => {
 				if (err) { throw err; }
 
 				expect(stdout.replace('\n', '')).to.be.equal(pkg.version);
-				done();
 			},
 		);
 	});
 
-	it('should return the package description with argument --help', (done) => {
+	it('should return the package description with argument --help', async () => {
 		execute(`${btcConverter} --help`,
 			(err, stdout /* , stderr */) => {
 				expect(stdout.includes(pkg.description)).to.be.true;
-				done();
 			},
 		);
 	});
 
-	it('should return the currency option when run with argument --help', (done) => {
+	it('should return the currency option when run with argument --help', async () => {
 		execute(`${btcConverter} --help`,
 			(err, stdout /* , stderr */) => {
 				expect(stdout.includes('--currency')).to.be.true;
-				done();
 			},
 		);
 	});
 
-	it('should return the amount option when run with argument --help', (done) => {
+	it('should return the amount option when run with argument --help', async () => {
 		execute(`${btcConverter} --help`,
 			(err, stdout /* , stderr */) => {
 				expect(stdout.includes('--amount')).to.be.true;
-				done();
 			},
 		);
 	});
